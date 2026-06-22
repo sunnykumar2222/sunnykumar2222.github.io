@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Assessment Portal — Sunny Kumar</title>
+<meta name="description" content="Case study: a Django-based online exam portal built for CVRU, covering question delivery, submissions, and results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+  .case-head{ padding:56px 0 40px; }
+  .back-link{ font-family:var(--mono); font-size:13px; color:var(--ink-faint); text-decoration:none; display:inline-block; margin-bottom:24px; }
+  .back-link:hover{ color:var(--indigo); }
+  .case-head h1{ font-size:clamp(2.2rem,4.5vw,3rem); font-weight:600; margin-bottom:18px; max-width:700px; }
+  .case-head .lede{ max-width:600px; margin-bottom:28px; }
+
+  .case-meta-row{
+    display:flex; flex-wrap:wrap; gap:32px;
+    padding:28px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .case-meta-row div h4{ font-family:var(--mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); letter-spacing:0.05em; margin-bottom:6px; }
+  .case-meta-row div p{ font-size:14px; color:var(--ink); font-weight:500; }
+
+  .case-section{ max-width:680px; }
+  .case-section h2{ font-size:1.6rem; font-weight:600; margin-bottom:16px; }
+  .case-section p{ color:var(--ink-soft); font-size:15px; line-height:1.8; margin-bottom:16px; }
+  .case-section ul{ color:var(--ink-soft); font-size:15px; line-height:1.8; margin-bottom:8px; }
+  .case-section ul li{ position:relative; padding-left:22px; margin-bottom:10px; }
+  .case-section ul li::before{ content:"→"; position:absolute; left:0; color:var(--coral); }
+
+  .pull-stat{
+    background:var(--bg-sage);
+    border-radius:16px;
+    padding:32px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    margin:36px 0;
+  }
+  .pull-stat .stat strong{ display:block; font-family:var(--display); font-size:2.2rem; color:var(--indigo); }
+  .pull-stat .stat span{ font-family:var(--mono); font-size:12px; color:var(--ink-soft); }
+
+  .case-cta{ display:flex; gap:14px; flex-wrap:wrap; padding-top:8px; }
+
+  .next-proj{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:28px 0; border-top:1px solid var(--line); margin-top:24px;
+  }
+  .next-proj a{ text-decoration:none; color:var(--ink); font-family:var(--display); font-size:1.1rem; font-weight:600; }
+  .next-proj a:hover{ color:var(--indigo); }
+  .next-proj span{ font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); display:block; margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark"><span class="dot"></span>Sunny Kumar</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html" class="nav-cta">Resume ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case-head">
+  <div class="wrap">
+    <a href="projects.html" class="back-link">← All projects</a>
+    <span class="eyebrow">Case study 04 / Academic build</span>
+    <h1>Online Assessment Portal — CVRU</h1>
+    <p class="lede">A full Django web application for delivering exams online — built from scratch around a clean, maintainable architecture.</p>
+    <div class="case-cta">
+      <a href="https://github.com/sunnykumar2222/online-assessment-portal-cvru" target="_blank" rel="noopener" class="btn btn-primary">View source on GitHub</a>
+      <a href="contact.html" class="btn btn-outline">Ask me about it</a>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="case-meta-row">
+      <div><h4>Role</h4><p>Sole developer</p></div>
+      <div><h4>Stack</h4><p>Django, Python, SQLite, HTML/CSS</p></div>
+      <div><h4>Pattern</h4><p>Django MVT architecture</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="case-section">
+      <h2>The problem</h2>
+      <p>CVRU needed a way to run assessments online — something that could deliver questions, accept submissions, and generate results without a manual, paper-based process.</p>
+
+      <h2>What I built</h2>
+      <ul>
+        <li>A full exam portal in Django covering the entire flow: question delivery, student submissions, and automated result generation.</li>
+        <li>An architecture built on Django's Model-View-Template (MVT) pattern, keeping data, logic, and presentation cleanly separated — so the codebase stays easy to extend.</li>
+        <li>A SQLite-backed data layer for storing questions, responses, and results reliably.</li>
+      </ul>
+
+      <div class="pull-stat">
+        <div class="stat"><strong>MVT</strong><span>CLEAN ARCHITECTURE</span></div>
+        <div class="stat"><strong>End-to-end</strong><span>EXAM → RESULT FLOW</span></div>
+      </div>
+
+      <h2>What it taught me</h2>
+      <p>This was my first real exposure to building a structured, multi-feature web app rather than a single script — and it's where I learned to think about a codebase as something other people (and future-me) need to be able to read.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="next-proj">
+      <div><span>Back to start</span><a href="project-attendance.html">Smart Attendance System →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Sunny Kumar</div>
+      <p class="footer-tag">Software developer building real, working products — from AI systems to full-stack apps.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/sunnykumar2222" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sunnykumarai" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:aisunnykumar1@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Sunny Kumar. Built with HTML &amp; CSS.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

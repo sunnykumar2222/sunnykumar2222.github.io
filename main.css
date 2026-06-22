@@ -1,0 +1,275 @@
+:root{
+  --bg: #FBF9F4;
+  --bg-card: #ffffff;
+  --bg-sage: #EEF1E8;
+  --ink: #1A1B23;
+  --ink-soft: #5A5C6B;
+  --ink-faint: #9A9CA8;
+  --line: #E4E1D6;
+  --indigo: #5B5FEF;
+  --indigo-dim: #EAEAFD;
+  --coral: #FF6B5B;
+  --coral-dim: #FFE9E5;
+
+  --display: "Fraunces", Georgia, serif;
+  --body: "Inter", -apple-system, sans-serif;
+  --mono: "Space Mono", "Consolas", monospace;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{ color:inherit; }
+ul{ list-style:none; }
+img{ max-width:100%; display:block; }
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+/* ================= NAV ================= */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,249,244,0.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-nav .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:74px;
+}
+.nav-mark{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:1.3rem;
+  text-decoration:none;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.nav-mark .dot{
+  width:9px; height:9px;
+  border-radius:50%;
+  background:var(--coral);
+  display:inline-block;
+}
+.nav-links{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.nav-links a{
+  font-family:var(--mono);
+  font-size:13px;
+  text-decoration:none;
+  color:var(--ink-soft);
+  padding:8px 16px;
+  border-radius:20px;
+  transition:background .15s, color .15s;
+}
+.nav-links a:hover{ background:var(--bg-sage); color:var(--ink); }
+.nav-links a.active{ background:var(--ink); color:var(--bg); }
+.nav-cta{
+  font-family:var(--mono) !important;
+  font-size:13px;
+  background:var(--indigo) !important;
+  color:#fff !important;
+  padding:9px 18px !important;
+  border-radius:20px;
+}
+.nav-cta:hover{ background:#4549d6 !important; }
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+}
+.nav-toggle span{
+  display:block;
+  width:22px;
+  height:2px;
+  background:var(--ink);
+  margin:5px 0;
+  transition:transform .2s, opacity .2s;
+}
+
+/* ================= ANNOTATION / EYEBROW ================= */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12.5px;
+  letter-spacing:0.04em;
+  color:var(--coral);
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:"";
+  width:7px; height:7px;
+  border-radius:50%;
+  background:var(--coral);
+  display:inline-block;
+}
+
+/* ================= TYPE ================= */
+h1,h2,h3{ font-family:var(--display); color:var(--ink); letter-spacing:-0.01em; }
+.lede{ color:var(--ink-soft); font-size:1.1rem; line-height:1.75; }
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--mono);
+  font-size:13.5px;
+  text-decoration:none;
+  padding:13px 24px;
+  border-radius:30px;
+  transition:transform .15s, box-shadow .15s, background .15s;
+  border:1.5px solid transparent;
+  cursor:pointer;
+}
+.btn-primary{
+  background:var(--ink);
+  color:var(--bg);
+}
+.btn-primary:hover{ background:var(--indigo); transform:translateY(-2px); box-shadow:0 8px 20px rgba(91,95,239,0.25); }
+.btn-outline{
+  background:transparent;
+  border-color:var(--ink);
+  color:var(--ink);
+}
+.btn-outline:hover{ background:var(--ink); color:var(--bg); transform:translateY(-2px); }
+.btn-sm{ padding:9px 18px; font-size:12.5px; }
+
+/* ================= SECTIONS ================= */
+section{ padding:88px 0; }
+.section-head{
+  max-width:600px;
+  margin-bottom:56px;
+}
+
+.divider{
+  height:1px;
+  background:var(--line);
+  border:none;
+}
+
+/* ================= FOOTER ================= */
+.site-footer{
+  border-top:1px solid var(--line);
+  padding:56px 0 40px;
+}
+.site-footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:32px;
+}
+.footer-brand{
+  font-family:var(--display);
+  font-size:1.2rem;
+  font-weight:600;
+  margin-bottom:8px;
+}
+.footer-tag{
+  color:var(--ink-faint);
+  font-size:13.5px;
+  max-width:280px;
+}
+.footer-links{
+  display:flex;
+  gap:28px;
+}
+.footer-col h4{
+  font-family:var(--mono);
+  font-size:11.5px;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  letter-spacing:0.05em;
+  margin-bottom:12px;
+}
+.footer-col a{
+  display:block;
+  font-size:13.5px;
+  color:var(--ink-soft);
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:color .15s;
+}
+.footer-col a:hover{ color:var(--indigo); }
+.footer-bottom{
+  margin-top:40px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:var(--ink-faint);
+  font-family:var(--mono);
+}
+
+/* ================= TAGS / CHIPS ================= */
+.tag{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--ink-soft);
+  background:var(--bg-sage);
+  border:1px solid var(--line);
+  padding:4px 11px;
+  border-radius:20px;
+  display:inline-block;
+}
+.tag-row{ display:flex; flex-wrap:wrap; gap:7px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 860px){
+  .wrap{ padding:0 22px; }
+  section{ padding:64px 0; }
+  .nav-links{
+    position:fixed;
+    top:74px;
+    left:0; right:0;
+    background:var(--bg);
+    flex-direction:column;
+    align-items:stretch;
+    padding:14px 22px 22px;
+    border-bottom:1px solid var(--line);
+    display:none;
+    gap:6px;
+  }
+  .nav-links.open{ display:flex; }
+  .nav-links a{ padding:12px 14px; border-radius:10px; }
+  .nav-toggle{ display:block; }
+  .site-footer .wrap{ flex-direction:column; }
+  .footer-links{ gap:36px; }
+}
+
+@media (max-width: 540px){
+  .footer-links{ flex-wrap:wrap; gap:24px; }
+}
+
+:focus-visible{ outline:2px solid var(--indigo); outline-offset:3px; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+}

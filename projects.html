@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sunny Kumar</title>
+<meta name="description" content="Projects by Sunny Kumar: an AI-driven attendance system, robotic reinforcement learning research, university QA testing, and a Django exam portal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+  .page-head{ padding:64px 0 20px; }
+  .page-head h1{ font-size:clamp(2.2rem, 4.5vw, 3.2rem); font-weight:600; margin-bottom:16px; }
+  .page-head .lede{ max-width:560px; }
+
+  .proj-list{ display:flex; flex-direction:column; gap:0; }
+  .proj-card{
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    align-items:start;
+    gap:28px;
+    padding:36px 0;
+    border-bottom:1px solid var(--line);
+    text-decoration:none;
+    color:inherit;
+    transition:padding-left .2s;
+  }
+  .proj-card:hover{ padding-left:8px; }
+  .proj-card:hover .proj-title{ color:var(--indigo); }
+  .proj-card:first-child{ padding-top:0; }
+
+  .proj-index{ font-family:var(--mono); color:var(--coral); font-size:13px; padding-top:6px; }
+  .proj-title{ font-family:var(--display); font-size:1.6rem; font-weight:600; margin-bottom:10px; transition:color .15s; }
+  .proj-desc{ color:var(--ink-soft); font-size:14.5px; max-width:520px; line-height:1.7; margin-bottom:14px; }
+  .proj-arrow{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-faint);
+    padding-top:8px;
+    white-space:nowrap;
+  }
+
+  .proj-badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:11px;
+    background:var(--coral-dim);
+    color:#C73E2C;
+    padding:3px 10px;
+    border-radius:20px;
+    margin-bottom:14px;
+  }
+
+  @media (max-width:700px){
+    .proj-card{ grid-template-columns:1fr; gap:10px; }
+    .proj-arrow{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark"><span class="dot"></span>Sunny Kumar</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html" class="nav-cta">Resume ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Selected work</span>
+    <h1>Projects</h1>
+    <p class="lede">Four builds that span AI, robotics, full-stack web development, and hands-on quality assurance — each one a real product, not a tutorial exercise.</p>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="wrap">
+    <div class="proj-list">
+
+      <a href="project-attendance.html" class="proj-card">
+        <span class="proj-index">01</span>
+        <div>
+          <span class="proj-badge">Pitched at CIMP Patna</span>
+          <h2 class="proj-title">Smart Attendance System</h2>
+          <p class="proj-desc">An AI-driven attendance platform using real-time facial recognition, a MySQL backend, and automated Twilio SMS alerts to parents — led end-to-end and pitched for startup incubation.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MySQL</span><span class="tag">Twilio API</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View case study →</span>
+      </a>
+
+      <a href="project-robotics.html" class="proj-card">
+        <span class="proj-index">02</span>
+        <div>
+          <span class="proj-badge">FH Aachen, Germany</span>
+          <h2 class="proj-title">Reinforcement Learning for Robotic Control</h2>
+          <p class="proj-desc">International research internship applying Deep Reinforcement Learning and Sim-to-Real transfer to train robotic agents through reward-based learning.</p>
+          <div class="tag-row">
+            <span class="tag">Deep RL</span><span class="tag">Neural Networks</span><span class="tag">Sim-to-Real</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View case study →</span>
+      </a>
+
+      <a href="project-qa.html" class="proj-card">
+        <span class="proj-index">03</span>
+        <div>
+          <span class="proj-badge">60+ bugs found</span>
+          <h2 class="proj-title">University Website Testing</h2>
+          <p class="proj-desc">Full SDLC-cycle QA on CVRU's official website — functional, usability, and performance testing that directly improved platform stability before launch.</p>
+          <div class="tag-row">
+            <span class="tag">Manual QA</span><span class="tag">SDLC</span><span class="tag">Agile</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View case study →</span>
+      </a>
+
+      <a href="project-portal.html" class="proj-card">
+        <span class="proj-index">04</span>
+        <div>
+          <span class="proj-badge">Academic build</span>
+          <h2 class="proj-title">Online Assessment Portal — CVRU</h2>
+          <p class="proj-desc">A full Django exam portal handling question delivery, submissions, and result generation, structured cleanly on the MVT pattern.</p>
+          <div class="tag-row">
+            <span class="tag">Django</span><span class="tag">Python</span><span class="tag">SQLite</span>
+          </div>
+        </div>
+        <span class="proj-arrow">View case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Sunny Kumar</div>
+      <p class="footer-tag">Software developer building real, working products — from AI systems to full-stack apps.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/sunnykumar2222" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sunnykumarai" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:aisunnykumar1@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Sunny Kumar. Built with HTML &amp; CSS.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

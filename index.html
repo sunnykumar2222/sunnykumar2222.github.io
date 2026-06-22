@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunny Kumar — Software Developer</title>
+<meta name="description" content="Sunny Kumar — CSE student and software developer. AI research in Germany, an AI-driven attendance system, and real-world QA experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+  /* ---- Home-specific ---- */
+  .hero{
+    padding:84px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5.2vw, 4.2rem);
+    line-height:1.05;
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--indigo);
+  }
+  .hero .lede{ max-width:480px; margin-bottom:32px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px; }
+  .hero-meta{
+    display:flex;
+    gap:28px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-faint);
+  }
+  .hero-meta strong{ color:var(--ink); display:block; font-family:var(--body); font-size:1.4rem; font-weight:700; }
+
+  .hero-card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 24px 60px -20px rgba(26,27,35,0.12);
+    position:relative;
+  }
+  .hero-card::before{
+    content:"";
+    position:absolute;
+    top:-14px; right:24px;
+    width:60px; height:28px;
+    background:var(--coral);
+    border-radius:6px;
+    transform:rotate(-3deg);
+  }
+  .terminal-head{
+    display:flex; gap:6px; margin-bottom:18px;
+  }
+  .terminal-head span{ width:10px; height:10px; border-radius:50%; background:var(--line); }
+  .terminal-head span:nth-child(1){ background:#FF6B5B; }
+  .terminal-head span:nth-child(2){ background:#FFC857; }
+  .terminal-head span:nth-child(3){ background:#5FE3A0; }
+  .code-line{ font-family:var(--mono); font-size:13px; color:var(--ink-soft); margin-bottom:9px; }
+  .code-line .key{ color:var(--indigo); }
+  .code-line .str{ color:#1F7A4F; }
+  .code-line .com{ color:var(--ink-faint); }
+
+  /* ---- Highlights strip ---- */
+  .highlights{ background:var(--bg-sage); }
+  .hl-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .hl-card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:26px;
+  }
+  .hl-card .num{ font-family:var(--mono); color:var(--coral); font-size:12px; margin-bottom:14px; display:block; }
+  .hl-card h3{ font-size:1.15rem; margin-bottom:10px; font-weight:600; }
+  .hl-card p{ color:var(--ink-soft); font-size:14px; line-height:1.7; }
+
+  /* ---- Log / timeline ---- */
+  .log-item{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:28px;
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .log-item:first-child{ padding-top:0; }
+  .log-date{ font-family:var(--mono); font-size:12.5px; color:var(--ink-faint); padding-top:4px; }
+  .log-body h3{ font-size:1.25rem; margin-bottom:8px; font-weight:600; }
+  .log-body p{ color:var(--ink-soft); font-size:14.5px; line-height:1.7; max-width:560px; margin-bottom:12px; }
+  .log-link{ font-family:var(--mono); font-size:12.5px; color:var(--indigo); text-decoration:none; border-bottom:1px solid var(--indigo-dim); }
+  .log-link:hover{ border-bottom-color:var(--indigo); }
+
+  /* ---- CTA band ---- */
+  .cta-band{
+    background:var(--ink);
+    border-radius:24px;
+    padding:56px 48px;
+    text-align:center;
+    margin:0 32px;
+  }
+  .cta-band h2{ color:#fff; font-size:2rem; margin-bottom:14px; }
+  .cta-band p{ color:#A6A8C0; max-width:460px; margin:0 auto 28px; font-size:15px; }
+  .cta-band .btn-primary{ background:var(--coral); }
+  .cta-band .btn-primary:hover{ background:#ff8676; }
+  .cta-band .btn-outline{ border-color:#444559; color:#fff; }
+  .cta-band .btn-outline:hover{ background:#fff; color:var(--ink); }
+  .cta-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hl-grid{ grid-template-columns:1fr; }
+    .log-item{ grid-template-columns:1fr; gap:8px; }
+    .cta-band{ margin:0 22px; padding:44px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark"><span class="dot"></span>Sunny Kumar</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html" class="nav-cta">Resume ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Open to opportunities</span>
+      <h1>I build software<br>that actually <em>runs.</em></h1>
+      <p class="lede">CSE student who took AI from the classroom to an international research lab in Germany — then back into real products: an AI-driven attendance system, and 60+ real bugs caught testing a live university platform.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">See my work</a>
+        <a href="contact.html" class="btn btn-outline">Get in touch</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>3</strong>Projects shipped</span>
+        <span><strong>60+</strong>Bugs caught in QA</span>
+        <span><strong>1</strong>International internship</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="terminal-head"><span></span><span></span><span></span></div>
+      <div class="code-line"><span class="key">const</span> developer = {</div>
+      <div class="code-line">&nbsp;&nbsp;name: <span class="str">"Sunny Kumar"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;based: <span class="str">"Bihar, India"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;stack: [<span class="str">"Python"</span>, <span class="str">"Flask"</span>, <span class="str">"Django"</span>],</div>
+      <div class="code-line">&nbsp;&nbsp;currentFocus: <span class="str">"AI + Full Stack"</span>,</div>
+      <div class="code-line">&nbsp;&nbsp;<span class="com">// trained in Germany, 2025</span></div>
+      <div class="code-line">};</div>
+    </div>
+  </div>
+</header>
+
+<section class="highlights">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why work with me</span>
+      <h2>Three things that set me apart</h2>
+    </div>
+    <div class="hl-grid">
+      <div class="hl-card">
+        <span class="num">// 01</span>
+        <h3>I ship, not just study</h3>
+        <p>Every project on this site is a working build — not a tutorial follow-along. The attendance system was pitched live for startup incubation at CIMP Patna.</p>
+      </div>
+      <div class="hl-card">
+        <span class="num">// 02</span>
+        <h3>International exposure</h3>
+        <p>Trained on-site at FH Aachen, Germany on Deep Reinforcement Learning and Cognitive Robotics — real lab work, not a remote course.</p>
+      </div>
+      <div class="hl-card">
+        <span class="num">// 03</span>
+        <h3>QA mindset, builder's hands</h3>
+        <p>I caught 60+ real bugs testing a live university website. I notice what breaks — and I know how to fix it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recent log</span>
+      <h2>What I've been building</h2>
+    </div>
+
+    <div class="log-item">
+      <div class="log-date">SEP 2025</div>
+      <div class="log-body">
+        <h3>Research Internship — FH Aachen, Germany</h3>
+        <p>Selected for an on-site international program on Deep Reinforcement Learning, Neural Networks, and Sim-to-Real transfer for robotic control.</p>
+        <a href="about.html" class="log-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="log-item">
+      <div class="log-date">2024 – 25</div>
+      <div class="log-body">
+        <h3>Smart Attendance System</h3>
+        <p>AI-driven facial recognition attendance platform with automated SMS alerts — pitched for startup incubation at CIMP Patna.</p>
+        <a href="project-attendance.html" class="log-link">View project →</a>
+      </div>
+    </div>
+
+    <div class="log-item">
+      <div class="log-date">2024</div>
+      <div class="log-body">
+        <h3>University Website Testing</h3>
+        <p>Full SDLC-cycle QA on CVRU's official website — found 60+ bugs before launch, recognized by the Head of Department.</p>
+        <a href="project-qa.html" class="log-link">View project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-band">
+    <h2>Let's build something.</h2>
+    <p>I'm looking for software development and full-stack roles where I can keep shipping real, working products.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Contact me</a>
+      <a href="resume.html" class="btn btn-outline">Download résumé</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Sunny Kumar</div>
+      <p class="footer-tag">Software developer building real, working products — from AI systems to full-stack apps.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/sunnykumar2222" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sunnykumarai" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:aisunnykumar1@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Sunny Kumar. Built with HTML &amp; CSS.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

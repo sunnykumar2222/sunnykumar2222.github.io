@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Sunny Kumar</title>
+<meta name="description" content="Get in touch with Sunny Kumar — software developer open to full-time roles and internships.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+  .contact-hero{ padding:72px 0 40px; text-align:center; }
+  .contact-hero h1{ font-size:clamp(2.2rem,4.5vw,3.2rem); font-weight:600; margin-bottom:18px; }
+  .contact-hero .lede{ max-width:520px; margin:0 auto; }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .contact-card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px;
+    text-decoration:none;
+    color:inherit;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    transition:transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .contact-card:hover{ transform:translateY(-3px); box-shadow:0 14px 30px -10px rgba(26,27,35,0.12); border-color:var(--indigo); }
+  .contact-icon{
+    width:46px; height:46px;
+    border-radius:12px;
+    background:var(--indigo-dim);
+    color:var(--indigo);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-card h4{ font-size:1rem; font-weight:600; margin-bottom:3px; }
+  .contact-card p{ font-size:13px; color:var(--ink-soft); font-family:var(--mono); }
+
+  .contact-note{
+    max-width:640px;
+    margin:48px auto 0;
+    background:var(--bg-sage);
+    border-radius:18px;
+    padding:32px;
+    text-align:center;
+  }
+  .contact-note p{ color:var(--ink-soft); font-size:14.5px; line-height:1.7; }
+  .contact-note strong{ color:var(--ink); }
+
+  .ref-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:760px; margin:0 auto; }
+  .ref-card{ background:var(--bg-card); border:1px solid var(--line); border-radius:14px; padding:22px; }
+  .ref-card h4{ font-size:1rem; margin-bottom:4px; font-weight:600; }
+  .ref-card .role{ font-family:var(--mono); font-size:12px; color:var(--coral); margin-bottom:10px; display:block; }
+  .ref-card p{ font-size:13px; color:var(--ink-soft); line-height:1.6; }
+
+  @media (max-width:700px){
+    .contact-grid{ grid-template-columns:1fr; }
+    .ref-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark"><span class="dot"></span>Sunny Kumar</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="resume.html" class="nav-cta">Resume ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="contact-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;">Let's talk</span>
+    <h1>Get in touch</h1>
+    <p class="lede">Open to full-time software development roles and internships. The fastest way to reach me is email or LinkedIn — I check both daily.</p>
+  </div>
+</header>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <a href="mailto:aisunnykumar1@gmail.com" class="contact-card">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </span>
+        <div><h4>Email</h4><p>aisunnykumar1@gmail.com</p></div>
+      </a>
+
+      <a href="tel:+918294692605" class="contact-card">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </span>
+        <div><h4>Phone</h4><p>+91 82946 92605</p></div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sunnykumarai" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </span>
+        <div><h4>LinkedIn</h4><p>linkedin.com/in/sunnykumarai</p></div>
+      </a>
+
+      <a href="https://github.com/sunnykumar2222" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
+        </span>
+        <div><h4>GitHub</h4><p>github.com/sunnykumar2222</p></div>
+      </a>
+
+    </div>
+
+    <div class="contact-note">
+      <p>📍 Based in <strong>Vaishali, Bihar, India</strong> — open to remote roles and willing to relocate for the right opportunity.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 40px; text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">References</span>
+      <h2>People who can vouch for my work</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <h4>Saurav Kumar</h4>
+        <span class="role">Head of Department, CSE — Dr. C.V. Raman University</span>
+        <p>+91 82527 18404 · sk.rajpoot3257@gmail.com</p>
+      </div>
+      <div class="ref-card">
+        <h4>Naadir Kamal</h4>
+        <span class="role">Coordinator, CSE — Dr. C.V. Raman University</span>
+        <p>+91 96080 80084</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Sunny Kumar</div>
+      <p class="footer-tag">Software developer building real, working products — from AI systems to full-stack apps.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/sunnykumar2222" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sunnykumarai" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:aisunnykumar1@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Sunny Kumar. Built with HTML &amp; CSS.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
